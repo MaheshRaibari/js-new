@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow Functions</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <input type="text" placeholder="Enter a name">
+    <br>
+    <button>Print Consonants</button>
+  </div>
+  <script>
+    let pera = document.querySelectorAll("p")
+    for( let i=0; i<=pera.length; i++){
+      pera[i].onmouseover = function(){
+        // pera[i].style.border = "2px solid red"
+        // pera[i].style.margin = "1rem"
+        // pera[i].style.padding = "1rem"
+        // pera[i].style.borderRadius = "0.5rem"
+
+        pera[i].style.cssText = 'border: 2px solid red; margin: 1rem; padding: 1rem; border-radius: 0.5rem'
+      }
+      pera[i].onmouseout = function(){
+        // pera[i].style.border = "none"
+        // pera[i].style.margin = "0"
+        // pera[i].style.padding = "0"
+        // pera[i].style.borderRadius = "none"
+        pera[i].style.cssText = 'border: none; margin: 0; padding: 0; border-radius: none'
+      }
+    }
+
+
+
+    // for (let i = 0; i < pera.length; i++) {
+    //   pera[i].onmouseover = function () {
+    //     this.style.cssText = 'border: 2px solid red; margin: 1rem; padding: 1rem; border-radius: 0.5rem'
+    //   }
+    //   pera[i].onmouseout = function () {
+    //     this.style.cssText = 'border: none; margin: 0; padding: 0; border-radius: none'
+    //   }
+    // }
+
+
+    // this is undefined in arrow function
+
+
+
+    // for (let i = 0; i < pera.length; i++) {
+    //   pera[i].onmouseover = () => {
+    //     this.style.cssText = 'border: 2px solid red; margin: 1rem; padding: 1rem; border-radius: 0.5rem'
+    //   }
+    //   pera[i].onmouseout = () => {
+    //     this.style.cssText = 'border: none; margin: 0; padding: 0; border-radius: none'
+    //   }
+    // }
+
+
+
+
+    // console.log("Apple" + "Banana" + 1 + 2 + "3")
+
+    // console.log(1 + 2 + '3' + "Apple")
+
+
+    // function printConsonants(name) {
+    //   let vowels = ['a', 'e', 'i', 'o', 'u']
+    //   let splt = name.toLowerCase().split('')
+    //   let output = ''
+    //   for (let i = 0; i < splt.length; i++) {
+    //     // if (!vowels.includes(name[i]))
+    //     //   output += name[i]
+    //     if (vowels.includes(splt[i]))
+    //       continue;
+    //     else
+    //       output += splt[i]
+    //   }
+    //   console.log(output)
+    // }
+
+    // const btn = document.querySelector("button")
+    // const input = document.querySelector("input")
+
+    // btn.onclick = () => {
+    //   printConsonants(input.value)
+    // }
+
+
+
+    // //Find out the largest number from an array, using for loop
+
+    // let numbers = [34, 3, 1, 55, 23, 56, 35, 9, 99, 100, -101, -10, -11, 2]
+
+    // let largest = numbers[0]
+    // for (let i = 0; i < numbers.length; i++) {
+    //   if (numbers[i] > largest)
+    //     largest = numbers[i]
+    // }
+    // console.log(largest)
+
+
+    // //Arrange in ascending order(smallest to largest)
+
+    // let marks = [34, 3, 1, 55, 23, 56, 35, 9, 99, 100, -101, -10, -11, 2]
+
+    // // console.log(marks.sort((a,b) => {return a-b}))
+
+    // for (let i = 0; i < marks.length; i++) {
+    //   for (let j = i + 1; j < marks.length; j++){
+    //     if(marks[i] < marks[j]){
+    //       //SWAP
+    //       let temp = marks[i]
+    //       marks[i] = marks[j]
+    //       marks[j] = temp
+    //     }
+    //   }
+    // }
+    // console.log(marks)
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="menu">
+
+    </div>
+
+
+    <script>
+        fetch('https://dummyjson.com/products')
+            .then((response) => {
+                return response.json()
+            })
+            .then((results) => {
+                console.log(results)
+                // showdata(resulte.products)
+                showdata(results.products)
+            })
+        function showdata(data) {
+            for (let i = 0; i < data.lenght; i++) {
+                let head = document.createElement('div')
+                head.setAttribute('class', 'products')
+                document.querySelector('.menu').append(head)
+
+
+                const image = document.createElement('img')
+                image.src = data[i].image[0]
+                document.querySelector('beforeend', images)
+
+                const name = document.createElement('h1')
+                name.innerHTML = data[i].title
+                head.insertAdjacentElement('beforeend', name)
+            }
+        }
+
+        // async function fetchdate() {
+        //     const response = await fetch('https://dummyjson.com/products')
+        //     const resolve=await response.json()
+        //     showdata(resolve.products)
+        // }
+
+
+
+
+
+        // fetch('https://dummyjson.com/products')
+        //     .then((response) => {
+        //         return response.json()
+        //     })
+        //     .then((results) => {
+        //         console.log(results)
+        //         showdata(resulte.products)
+        //     })
+        // for (let i = 0; i < data.lenght; i++) {
+        //     let head = document.createElement('div')
+        //     head.setAttribute('class', 'raja')
+        //     document.querySelector('.menu').append(head)
+
+        //     const
+        //         }
+        //  }  
+
+        let x={
+            name: "Deepak",
+            phone:12345,
+            address
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

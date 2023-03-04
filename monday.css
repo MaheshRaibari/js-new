@@ -1,0 +1,16 @@
+*{
+    margin: ;
+    padding: ;
+    box-sizing: border-box;
+}
+
+.fist{
+    display: flex;
+}
+.menu{
+    border: 1px solid;
+    margin-right: 10%;
+    margin-left: 20px;
+    text-align: center;
+    background-color: aquamarine;
+}

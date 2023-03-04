@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random user</title>
+</head>
+
+<body>
+    <div class="wrapper"></div>
+
+
+
+    <script>
+        fetch("https://randomuser.me/api/")
+            .then((response) => {
+                return response.json()
+            })
+            .then((result) => {
+                console.log(result)
+                randomdata(result.results[0])
+            })
+        function randomdata(data) {
+            let box = document.createElement('div')
+            box.setAttribute('class', 'box')
+            document.querySelector('.wrapper').append(box)
+
+            const image = document.createElement('img')
+            image.src = data.picture.large
+            box.insertAdjacentElement('beforeend', image)
+
+            const name = document.createElement('h1')
+            name.innerHTML = 'Name :' + data.name.first + " " + data.name.last
+            box.insertAdjacentElement('beforeend', name)
+
+            const mail = document.createElement('h2')
+            mail.innerHTML = 'email :' + data.email
+            box.insertAdjacentElement('beforeend', mail)
+
+            const phone = document.createElement('h3')
+            phone.innerHTML = 'Phone :' + data.phone
+            box.insertAdjacentElement('beforeend', phone)
+
+        }
+    </script>
+</body>
+
+</html>
